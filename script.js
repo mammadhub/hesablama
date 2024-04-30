@@ -2,7 +2,8 @@ const toplanan1 = document.querySelector(".toplanan1");
 const toplanan2 = document.querySelector(".toplanan2");
 const cem = document.querySelector(".cem");
 const btn = document.querySelector(".btn");
-const select = document.querySelector(".select");
+// const select = document.querySelector(".select");
+const emel = document.querySelector(".emel")
 
 btn.addEventListener("click", function() {
     if (toplanan1.value === "" || toplanan2.value === "") {
@@ -11,7 +12,7 @@ btn.addEventListener("click", function() {
         let toplanan11 = parseFloat(toplanan1.value);
         let toplanan22 = parseFloat(toplanan2.value);
         let netice;
-        switch (select.value) {
+        switch (emel.value) {
             case '+':
                 netice = toplanan11 + toplanan22;
                 break;
@@ -25,7 +26,7 @@ btn.addEventListener("click", function() {
                 netice = toplanan11 / toplanan22;
                 break;
             default:
-                netice = "Yanlış operator!";
+                alert("Yanlış operator!") ;
         }
         cem.textContent = netice;
     }
